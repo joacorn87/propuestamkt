@@ -1,0 +1,338 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Análisis Estratégico para iEvents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .slide-content {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
+        .swot-box {
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .swot-box h3 {
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        .word-cloud-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem 1rem;
+            line-height: 1.2;
+        }
+        /* Colores personalizados de la marca iEvents */
+        .text-ievents-purple {
+            color: #A78BFA;
+        }
+        .border-ievents-purple {
+            border-color: #A78BFA;
+        }
+        .text-ievents-orange {
+            color: #E59464;
+        }
+        .bg-ievents-purple-hover:hover {
+            background-color: #A78BFA;
+            color: #111827; /* Cambiar texto a oscuro para contraste en hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div id="presentation" class="relative w-full h-screen">
+
+        <!-- Slide 1: Título -->
+        <div class="slide active w-full h-full flex-col justify-center items-center text-center p-8 bg-gray-800" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/1200x800/1a202c/ffffff?text=iEvents'); background-size: cover; background-position: center;">
+            <div class="slide-content max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-black mb-4">El punto de partida de iEvents</h1>
+                <p class="text-2xl md:text-4xl text-gray-300">Análisis para definir su siguiente nivel</p>
+                <p class="mt-8 text-lg text-gray-400">11 de agosto, 2025</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Resumen Ejecutivo -->
+        <div class="slide w-full h-full flex-col justify-center items-center text-center p-8">
+            <div class="slide-content max-w-4xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-4">Diagnóstico principal</h2>
+                <p class="text-4xl md:text-6xl font-bold leading-tight">La calidad y el talento de iEvents son de primer nivel, pero su marca aún no lo comunica con toda su fuerza.</p>
+                <p class="mt-6 text-xl text-gray-300">Existe una brecha entre la excelencia del equipo y cómo es percibido por el mercado. Esa es su mayor área de oportunidad.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: El ADN de la Marca -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-6xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-2 text-center">El ADN de iEvents: ¿cómo se define el equipo hoy?</h2>
+                <p class="text-center text-gray-400 mb-10">Basado en los resultados de la encuesta interna "Quién es iEvents en este momento".</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+                    <!-- Atributo Principal -->
+                    <div class="bg-gray-800 p-8 rounded-xl border-2 border-ievents-purple w-full md:w-1/3">
+                        <h3 class="text-2xl font-bold text-ievents-orange mb-3">Atributo dominante</h3>
+                        <p class="text-5xl font-black text-ievents-purple">Colaborativo</p>
+                        <p class="text-gray-400 mt-4">Es la característica principal que define la cultura y el servicio de iEvents.</p>
+                    </div>
+                    <!-- Atributos Secundarios -->
+                    <div class="bg-gray-800 p-8 rounded-xl w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold text-ievents-orange mb-4">Fortalezas clave</h3>
+                        <div class="flex justify-center gap-8">
+                            <div>
+                                <p class="text-4xl font-bold text-white">Creativo</p>
+                            </div>
+                            <div>
+                                <p class="text-4xl font-bold text-white">Amigable</p>
+                            </div>
+                        </div>
+                         <p class="text-gray-400 mt-4">Estos dos atributos son pilares fundamentales de la identidad y la forma de trabajar del equipo.</p>
+                    </div>
+                </div>
+                <p class="mt-12 text-center text-lg text-gray-300 bg-gray-800/50 p-4 rounded-lg"><strong>En resumen:</strong> El corazón de iEvents está en su gente y en cómo construyen relaciones. La base es súper sólida, pero está más enfocada en el "cómo" hacen las cosas que en el "qué" resultados estratégicos generan para los clientes.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Nubes de Palabras de Percepción -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-7xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-6 text-center">La percepción de iEvents: hoy vs. mañana</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Nube de Percepción Actual -->
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold text-center mb-4 text-ievents-orange">Cómo creen que los perciben hoy</h3>
+                        <div id="perceptionCloud" class="word-cloud-container min-h-[300px]">
+                            <!-- Las palabras se insertarán aquí con JS -->
+                        </div>
+                    </div>
+                    <!-- Nube de Percepción Deseada -->
+                    <div class="bg-gray-800 p-6 rounded-xl border-2 border-ievents-purple">
+                        <h3 class="text-xl font-bold text-center mb-4 text-ievents-orange">Cómo les gustaría que los perciban</h3>
+                        <div id="desiredCloud" class="word-cloud-container min-h-[300px]">
+                            <!-- Las palabras se insertarán aquí con JS -->
+                        </div>
+                    </div>
+                </div>
+                 <p class="mt-6 text-center text-md text-gray-400 bg-gray-800/50 p-3 rounded-lg"><strong>El objetivo:</strong> Hacer que la nube de la derecha se convierta en la nueva realidad de iEvents. Las palabras más grandes son las que tienen mayor frecuencia en las encuestas del equipo.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Auditoría de Activos Digitales -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-5xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-8 text-center">Auditoría de activos digitales: ¿qué comunica su escaparate digital?</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold flex items-center text-ievents-orange">
+                            <svg class="w-6 h-6 mr-3 text-ievents-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Sitio web (ievents.mx)
+                        </h3>
+                        <p class="text-gray-300 mt-2 ml-9">La web se ve bien, pero habla de lo que hacen, no de lo que solucionan. Esta formalizada como un catálogo de servicios. Falta el enfoque en resultados y ROI para el cliente.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold flex items-center text-ievents-orange">
+                            <svg class="w-6 h-6 mr-3 text-ievents-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Redes sociales (LinkedIn & Instagram)
+                        </h3>
+                        <p class="text-gray-300 mt-2 ml-9">Son como un álbum de fotos. Bonito, pero no genera conversación ni atrae clientes. Necesitan una estrategia para construir comunidad y demostrar por qué son los mejores.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold flex items-center text-ievents-orange">
+                            <svg class="w-6 h-6 mr-3 text-ievents-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            Marca personal del equipo fundador
+                        </h3>
+                        <p class="text-gray-300 mt-2 ml-9">Particularmente el perfil de Andy es un arma secreta que no se está usando. Hay que convertirlo en una plataforma activa para atraer oportunidades de alto nivel y generar confianza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: SWOT -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-4 md:p-8">
+            <div class="slide-content w-full max-w-6xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-6 text-center">Análisis FODA de iEvents</h2>
+                <div class="swot-grid text-sm md:text-base">
+                    <div class="swot-box bg-green-900/50 border border-green-500">
+                        <h3 class="text-ievents-orange"><svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>Fortalezas</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Servicio 360°</li>
+                            <li>Equipo consolidado</li>
+                            <li>Experiencia de más de 20 años</li>
+                            <li>Dominio de eventos híbridos y virtuales</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box bg-yellow-900/50 border border-yellow-500">
+                        <h3 class="text-ievents-orange"><svg class="w-6 h-6 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Debilidades</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>La marca no refleja el talento interno</li>
+                            <li>Las redes son un portafolio, no un imán</li>
+                            <li>Comunicación no enfocada en resultados</li>
+                            <li>El perfil del CEO es un activo dormido</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box bg-ievents-purple/20 border border-ievents-purple">
+                        <h3 class="text-ievents-orange"><svg class="w-6 h-6 mr-2 text-ievents-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.373 3.373 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>Oportunidades</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Capitalizar la demanda de resultados que espera el mercado</li>
+                            <li>Posicionar al CEO como líder de opinión</li>
+                            <li>Convertirse en la fuente #1 de contenido</li>
+                            <li>Ejecutar las grandes ideas que ya existen</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box bg-red-900/50 border border-red-500">
+                        <h3 class="text-ievents-orange"><svg class="w-6 h-6 mr-2 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>Amenazas</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Competencia con marketing más agresivo</li>
+                            <li>Riesgo de competir solo por precio</li>
+                            <li>Ciclos económicos y recortes de presupuesto</li>
+                            <li>Evolución tecnológica constante</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Conclusión (MODIFICADO) -->
+        <div class="slide w-full h-full flex-col justify-center items-center text-center p-8">
+            <div class="slide-content max-w-4xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-4">Conclusión del diagnóstico</h2>
+                <p class="text-4xl md:text-6xl font-bold leading-tight">El reto no es mejorar la operación, sino alinear la comunicación con la excelencia que ya existe.</p>
+                <p class="mt-6 text-xl text-gray-300">Es el momento de que el mundo vea a <span class="text-ievents-purple font-bold">iEvents</span> por lo que realmente es: <span class="text-ievents-orange font-bold">un socio estratégico indispensable para potenciar las ventas y visibilidad de sus clientes con experiencias únicas.</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles de Navegación -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-4">
+        <button id="prev" class="bg-gray-700 bg-ievents-purple-hover text-white font-bold p-3 rounded-full transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <div id="slide-counter" class="text-lg font-semibold text-gray-300"></div>
+        <button id="next" class="bg-gray-700 bg-ievents-purple-hover text-white font-bold p-3 rounded-full transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                slides[index].classList.add('active');
+                slideCounter.textContent = `${index + 1} / ${slides.length}`;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            showSlide(currentSlide);
+
+            // --- Datos para las Nubes de Palabras (Extraídos de las imágenes) ---
+            const perceptionData = [
+                { text: 'Creative', freq: 5 }, { text: 'Reliable', freq: 5 }, { text: 'Collaborative', freq: 5 },
+                { text: 'Friendly', freq: 3 }, { text: 'Experimental', freq: 2 }, { text: 'Professional', freq: 2 },
+                { text: 'Energetic', freq: 2 }, { text: 'Imaginative', freq: 2 }, { text: 'Sincere', freq: 1 },
+                { text: 'Eclectic', freq: 1 }, { text: 'Unique', freq: 1 }, { text: 'Dynamic', freq: 1 }, { text: 'Daring', freq: 1 }
+            ];
+
+            const desiredData = [
+                { text: 'Professional', freq: 6 }, { text: 'Creative', freq: 5 }, { text: 'Reliable', freq: 4 },
+                { text: 'Authentic', freq: 3 }, { text: 'Cutting-Edge', freq: 3 }, { text: 'Innovative', freq: 3 },
+                { text: 'Sincere', freq: 2 }, { text: 'Unique', freq: 2 }, { text: 'Sustainable', freq: 2 },
+                { text: 'Dynamic', freq: 2 }, { text: 'Empowering', freq: 2 }, { text: 'Confident', freq: 1 },
+                { text: 'Informal', freq: 1 }, { text: 'Artistic', freq: 1 }, { text: 'Friendly', freq: 1 },
+                { text: 'Inspiring', freq: 1 }, { text: 'Futuristic', freq: 1 }, { text: 'Sophisticated', freq: 1 },
+                { text: 'Experiential', freq: 1 }, { text: 'Edgy', freq: 1 }, { text: 'Experimental', freq: 1 }, { text: 'Spirited', freq: 1 }
+            ];
+
+            // --- Función para generar las nubes de palabras ---
+            function generateWordCloud(containerId, data) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+                container.innerHTML = ''; // Limpiar contenido previo
+                
+                const fontSizes = {
+                    1: 'text-lg', 2: 'text-xl', 3: 'text-2xl', 4: 'text-4xl', 5: 'text-5xl', 6: 'text-6xl'
+                };
+
+                // Desordenar los datos para una apariencia más de nube
+                data.sort(() => Math.random() - 0.5);
+
+                data.forEach((item, index) => {
+                    const wordSpan = document.createElement('span');
+                    const sizeClass = fontSizes[item.freq] || 'text-base';
+                    
+                    let colorClass;
+                    // Asignar color de marca a las palabras más importantes
+                    if (item.freq >= 5) {
+                        colorClass = 'text-ievents-purple font-black';
+                    } else if (item.freq >= 3) {
+                        colorClass = 'text-white font-bold';
+                    } else {
+                        colorClass = 'text-gray-400 font-semibold';
+                    }
+
+                    wordSpan.className = `inline-block p-1 md:p-2 ${sizeClass} ${colorClass} transition-transform duration-300 hover:scale-110`;
+                    wordSpan.textContent = item.text;
+                    container.appendChild(wordSpan);
+                });
+            }
+
+            generateWordCloud('perceptionCloud', perceptionData);
+            generateWordCloud('desiredCloud', desiredData);
+        });
+    </script>
+</body>
+</html>

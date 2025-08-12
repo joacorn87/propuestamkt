@@ -1,0 +1,317 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Propuesta Estratégica para iEvents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .slide-content {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .pillar-card {
+            background-color: rgba(31, 41, 55, 0.7);
+            border: 1px solid rgba(167, 139, 250, 0.5);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        /* Colores personalizados de la marca iEvents */
+        .text-ievents-purple {
+            color: #A78BFA;
+        }
+        .border-ievents-purple {
+            border-color: #A78BFA;
+        }
+        .text-ievents-orange {
+            color: #E59464;
+        }
+        .bg-ievents-purple {
+            background-color: #A78BFA;
+        }
+        .bg-ievents-purple-hover:hover {
+            background-color: #A78BFA;
+            color: #111827; /* Cambiar texto a oscuro para contraste en hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div id="presentation" class="relative w-full h-screen">
+
+        <!-- Slide 1: Título -->
+        <div class="slide active w-full h-full flex-col justify-center items-center text-center p-8 bg-gray-800" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/1200x800/1a202c/ffffff?text=Estrategia'); background-size: cover; background-position: center;">
+            <div class="slide-content max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-black mb-4">Propuesta estratégica 360°</h1>
+                <p class="text-2xl md:text-4xl text-gray-300">Transformando la percepción para dominar el mercado</p>
+                <p class="mt-8 text-lg text-gray-400">Preparado para el equipo de <span class="font-bold text-ievents-purple">iEvents</span> | 11 de agosto, 2025</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Visión y Misión -->
+        <div class="slide w-full h-full flex-col justify-center items-center text-center p-8">
+            <div class="slide-content max-w-4xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-4">Visión y misión de la estrategia</h2>
+                <p class="text-4xl md:text-5xl font-bold leading-tight">Transformar a iEvents de ser una productora de eventos a ser el <span class="text-ievents-orange">socio estratégico de referencia</span> en la creación de experiencias de marca innovadoras y rentables en México.</p>
+                <p class="mt-6 text-xl text-gray-300">La misión es cerrar la brecha de percepción, construyendo una marca que comunique el verdadero valor, la sofisticación y el impacto de negocio que iEvents entrega.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Objetivos Estratégicos -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-6xl">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-8 text-center">Objetivos estratégicos propuestos</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-xl border border-ievents-purple/50">
+                        <h3 class="text-3xl font-bold text-ievents-orange flex items-center mb-4">
+                            <svg class="w-8 h-8 mr-3 text-ievents-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Objetivos de marca
+                        </h3>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-3">
+                            <li>Elevar la percepción de marca para ser sinónimo de <strong>profesionalismo, innovación y rentabilidad para los clientes.</strong></li>
+                            <li>Consolidar al equipo founder como una voz líder y de confianza en la industria.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-green-500/50">
+                        <h3 class="text-3xl font-bold text-ievents-orange flex items-center mb-4">
+                            <svg class="w-8 h-8 mr-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            Objetivos de negocio
+                        </h3>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-3">
+                            <li>Incrementar los leads calificados (MQLs) de origen digital en un <strong>40% en 12 meses.</strong></li>
+                            <li>Aumentar el ticket promedio al atraer clientes que buscan valor estratégico sobre precio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Los 4 Pilares -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-6xl text-center">
+                <h2 class="text-2xl font-bold text-ievents-purple mb-4">La estrategia 360°</h2>
+                <p class="text-4xl md:text-5xl font-bold leading-tight mb-10">Los 4 pilares de acción</p>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="pillar-card">
+                        <div class="text-ievents-purple mb-4"><svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg></div>
+                        <h3 class="text-xl font-bold text-ievents-orange">Reposicionamiento de marca</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Definir y comunicar el nuevo mensaje estratégico.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="text-ievents-purple mb-4"><svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>
+                        <h3 class="text-xl font-bold text-ievents-orange">Liderazgo de opinión</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Demostrar la experiencia y visión innovadora.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="text-ievents-purple mb-4"><svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                        <h3 class="text-xl font-bold text-ievents-orange">Motor de captación</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Convertir la reputación en oportunidades de negocio.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="text-ievents-purple mb-4"><svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.721 19.542l.542-.542A5 5 0 0115.207 15h-6.414a5 5 0 01-6.942 4l.542.542z"></path></svg></div>
+                        <h3 class="text-xl font-bold text-ievents-orange">Alianzas y PR 360°</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Amplificar el alcance y consolidar el liderazgo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Pilar 1 -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-4xl">
+                <h2 class="text-4xl font-black mb-2 text-ievents-orange">Pilar 1: Reposicionamiento de marca</h2>
+                <p class="text-xl text-ievents-purple mb-8">El cimiento: alinear cada punto de contacto con la nueva identidad "profesional" y "auténtica".</p>
+                <div class="space-y-4 text-lg">
+                    <p><strong>1.1 Taller y guía de voz y mensaje:</strong> Definir el arquetipo y la personalidad de la marca para garantizar consistencia y proyectar sofisticación.</p>
+                    <p><strong>1.2 Transformación de activos digitales:</strong> Reescritura estratégica de la web y perfiles sociales para articular soluciones, no solo describir servicios.</p>
+                    <p><strong>1.3 Desarrollo de casos de éxito con ROI:</strong> Crear herramientas de venta poderosas que demuestren el valor de negocio y el impacto cuantificable de sus eventos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Pilar 2 -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-4xl">
+                <h2 class="text-4xl font-black mb-2 text-ievents-orange">Pilar 2: Liderazgo de opinión</h2>
+                <p class="text-xl text-ievents-purple mb-8">La demostración: probar activamente la "innovación" y el pensamiento "cutting-edge".</p>
+                <div class="space-y-4 text-lg">
+                    <p><strong>2.1 Programa de marca personal del CEO:</strong> Posicionar a Andy Huerta como un referente a través de contenido de valor sobre el futuro de la industria en LinkedIn.</p>
+                    <p><strong>2.2 Producción de contenido "pilar" de innovación:</strong> Ejecutar recolectar y darle impacto a todos los contenidos audiovisuales que poseen.</p>
+                    <p><strong>2.3 Creación de un hub de contenidos ("iEvents Insights"):</strong> Lanzar un blog para atraer tráfico orgánico, nutrir prospectos y posicionar a iEvents como un generador de conocimiento.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Pilar 3 -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-4xl">
+                <h2 class="text-4xl font-black mb-2 text-ievents-orange">Pilar 3: Motor de captación</h2>
+                <p class="text-xl text-ievents-purple mb-8">La conversión: traducir la nueva autoridad en un flujo constante de oportunidades de negocio.</p>
+                <div class="space-y-4 text-lg">
+                    <p><strong>3.1 Estrategia SEO de intención de compra:</strong> Optimizar el sitio para aparecer en Google cuando los clientes están listos para contratar.</p>
+                    <p><strong>3.2 Funnel con lead magnet:</strong> Crear una guía de alto valor (ej. "El Playbook del ROI para Eventos") para construir una base de datos propia de prospectos interesados.</p>
+                    <p><strong>3.3 Publicidad de precisión en LinkedIn:</strong> Lanzar campañas ultra-segmentadas para llegar directamente a los tomadores de decisiones de sus clientes ideales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Pilar 4 -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-4xl">
+                <h2 class="text-4xl font-black mb-2 text-ievents-orange">Pilar 4: Alianzas y PR 360°</h2>
+                <p class="text-xl text-ievents-purple mb-8">La amplificación: consolidar el estatus de líder en todo el ecosistema de negocios.</p>
+                <div class="space-y-4 text-lg">
+                    <p><strong>4.1 Estrategia de relaciones públicas (PR) digital:</strong> Conseguir que Andy Huerta sea citado en medios de prestigio para potenciar su credibilidad.</p>
+                    <p><strong>4.2 Programa de alianzas estratégicas:</strong> Construir relaciones con socios complementarios para acceder a nuevas audiencias y generar referidos de calidad.</p>
+                    <p><strong>4.3 Kit de ventas premium:</strong> Diseñar una presentación comercial y brochures que reflejen la nueva identidad de marca y equipen al equipo de ventas para ganar.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Roadmap -->
+        <div class="slide w-full h-full flex-col justify-center items-center p-8">
+            <div class="slide-content w-full max-w-5xl">
+                <h2 class="text-4xl font-black mb-8 text-center text-ievents-orange">Hoja de ruta de implementación</h2>
+                <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-4">
+                    <div class="flex-1 text-center p-6 bg-gray-800 rounded-xl">
+                        <p class="text-ievents-purple font-bold">FASE 1 (Meses 1-3)</p>
+                        <h3 class="text-2xl font-bold mt-2">Fundamentals</h3>
+                        <p class="mt-2 text-gray-300">Reposicionamiento de la marca y comienzo de la vocería.</p>
+                    </div>
+                    <div class="flex items-center justify-center text-gray-500 text-2xl font-bold hidden md:flex">></div>
+                    <div class="flex-1 text-center p-6 bg-gray-800 rounded-xl">
+                        <p class="text-ievents-purple font-bold">FASE 2 (Meses 4-9)</p>
+                        <h3 class="text-2xl font-bold mt-2">Aceleración</h3>
+                        <p class="mt-2 text-gray-300">Ejecución de la estrategia de contenidos y motor de captación.</p>
+                    </div>
+                     <div class="flex items-center justify-center text-gray-500 text-2xl font-bold hidden md:flex">></div>
+                    <div class="flex-1 text-center p-6 bg-gray-800 rounded-xl">
+                        <p class="text-ievents-purple font-bold">FASE 3 (Mes 10+)</p>
+                        <h3 class="text-2xl font-bold mt-2">Optimización</h3>
+                        <p class="mt-2 text-gray-300">Análisis de datos, optimización y expansión con PR y alianzas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Próximos Pasos -->
+        <div class="slide w-full h-full flex-col justify-center items-center text-center p-8">
+            <div class="slide-content max-w-4xl">
+                <h2 class="text-5xl font-black mb-8 text-ievents-orange">Próximos pasos</h2>
+                <div class="text-left mx-auto max-w-md space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-ievents-purple text-gray-900 rounded-full h-10 w-10 flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0">1</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Alineación</h3>
+                            <p class="text-gray-300">Discutir y validar esta propuesta estratégica para asegurar que estamos 100% en sintonía.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-ievents-purple text-gray-900 rounded-full h-10 w-10 flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0">2</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Aprobación</h3>
+                            <p class="text-gray-300">Seleccionar el plan de inversión y la fase de arranque que mejor se adapte a sus objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-ievents-purple text-gray-900 rounded-full h-10 w-10 flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0">3</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">¡Acción!</h3>
+                            <p class="text-gray-300">Agendar la sesión de kick-off para la próxima semana y comenzar la transformación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 11: Cierre -->
+        <div class="slide w-full h-full flex-col justify-center items-center text-center p-8">
+            <div class="slide-content max-w-4xl">
+                 <p class="text-4xl md:text-6xl font-bold leading-tight">Estamos listos para ser el socio estratégico que convierta la excelencia de <span class="text-ievents-purple">iEvents</span> en el aliado estratégico de referencia para sus clientes.</p>
+                 <p class="mt-8 text-2xl text-gray-400">Gracias.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Controles de Navegación -->
+    <div class="absolute bottom-4 left-12 flex items-center space-x-4 z-10">
+        <div id="slide-counter" class="text-lg font-semibold text-gray-300"></div>
+    </div>
+    <div class="absolute bottom-4 right-12 flex items-center space-x-4 z-10">
+        <button id="prev" class="bg-gray-700 bg-ievents-purple-hover text-white font-bold p-3 rounded-full transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="next" class="bg-gray-700 bg-ievents-purple-hover text-white font-bold p-3 rounded-full transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                slides[index].classList.add('active');
+                slideCounter.textContent = `${index + 1} / ${slides.length}`;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
